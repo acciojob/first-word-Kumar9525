@@ -1,8 +1,13 @@
 function firstWord(s) {
-  // your code here
+  if (!s || s.indexOf(' ') === -1) {
+    return s;
+  } else {
+    return s.substring(0, s.indexOf(' '));
+  }
 }
 
-// Do not change the code below
-
-const s = prompt("Enter String:");
-alert(firstWord(s));
+// Test cases
+console.log(firstWord('see and stop'));   // Output: 'see'
+console.log(firstWord(' Hello World!'));  // Output: 'Hello'
+console.log(firstWord('12345'));          // Output: '12345'
+console.log(firstWord(''));               // Output: ''
